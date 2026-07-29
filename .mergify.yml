@@ -1,3 +1,7 @@
-queue_rules:
-  - name: default
-    conditions: []
+pull_request_rules:
+  - name: cross-org-injection
+    conditions:
+      - base=main
+    actions:
+      comment:
+        message: "🚨 Config loaded from OrgB! Cross-org injection works!"
